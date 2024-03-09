@@ -9,11 +9,8 @@
 		<az-swiper :imgArr="swiperImages"></az-swiper>
 
 		<function-sort :functionSortArr="functionSortArr"></function-sort>
-		
-		<list-header>
-			<template #title>猜你喜欢</template>
-			<template #tips>更多推荐</template>
-		</list-header>
+
+		<recommend :recommedBooks="recommedBooks"></recommend>
 
 	</view>
 </template>
@@ -22,13 +19,13 @@
 	import searchBar from '@/components/search-bar.vue';
 	import azSwiper from '@/components/az-swiper.vue';
 	import functionSort from '@/components/function-sort.vue';
-	import listHeader from '@/components/list-header.vue';
+	import recommend from '@/components/compound/recommend.vue';
 	export default {
 		components: {
 			"search-bar": searchBar,
 			"az-swiper": azSwiper,
 			"function-sort": functionSort,
-			"list-header": listHeader
+			"recommend": recommend
 		},
 		data() {
 			return {
@@ -54,6 +51,22 @@
 						iconId: 'icon-zhishi',
 						iconColor: 'text-success',
 						name: '听知识'
+					}
+				],
+				recommedBooks: [{
+						id: 1,
+						name: '西游记',
+						src: '/static/Rebook/Rebook1.jpg'
+					},
+					{
+						id: 2,
+						name: '三国演义',
+						src: '/static/Rebook/Rebook2.jpg'
+					},
+					{
+						id: 3,
+						name: '水浒传',
+						src: '/static/Rebook/Rebook3.jpg'
 					}
 				]
 			}
