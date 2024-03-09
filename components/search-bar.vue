@@ -10,12 +10,7 @@
 		name: "search-bar",
 		data() {
 			return {
-				// #ifdef MP
-				isMP: true,
-				// #endif
-				// #ifndef MP
-				isMP: false,
-				// #endif
+				isMP: this.$isMP
 			}
 		}
 	}

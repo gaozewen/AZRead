@@ -9,6 +9,13 @@ Vue.config.productionTip = false
 // 全局注册组件
 Vue.component('iconfont', iconfont)
 
+// #ifdef MP
+Vue.prototype.$isMP = true;
+// #endif
+// #ifndef MP
+Vue.prototype.$isMP = false;
+// #endif
+
 
 App.mpType = 'app'
 const app = new Vue({
