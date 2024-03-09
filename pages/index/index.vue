@@ -9,6 +9,11 @@
 		<az-swiper :imgArr="swiperImages"></az-swiper>
 
 		<function-sort :functionSortArr="functionSortArr"></function-sort>
+		
+		<list-header>
+			<template #title>猜你喜欢</template>
+			<template #tips>更多推荐</template>
+		</list-header>
 
 	</view>
 </template>
@@ -16,12 +21,14 @@
 <script>
 	import searchBar from '@/components/search-bar.vue';
 	import azSwiper from '@/components/az-swiper.vue';
-	import functionSort from '@/components/function-sort.vue'
+	import functionSort from '@/components/function-sort.vue';
+	import listHeader from '@/components/list-header.vue';
 	export default {
 		components: {
 			"search-bar": searchBar,
 			"az-swiper": azSwiper,
-			"function-sort": functionSort
+			"function-sort": functionSort,
+			"list-header": listHeader
 		},
 		data() {
 			return {

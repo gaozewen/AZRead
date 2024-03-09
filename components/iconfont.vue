@@ -1,5 +1,7 @@
 <template>
-	<text class="iconfont" :class="[iconId,iconColor]" :style="{fontSize:`${iconSize}rpx`}"></text>
+	<view class="flex align-center">
+		<text class="iconfont" :class="[iconId,iconColor]" :style="{fontSize:`${iconSize}rpx`}"></text>
+	</view>
 </template>
 
 <script>
