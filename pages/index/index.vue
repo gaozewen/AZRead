@@ -7,6 +7,8 @@
 		<view>{{statusBarHeight}}</view>
 		<text class="iconfont icon-shoucang font-md"></text>
 		<iconfont iconId="icon-bofangsanjiaoxing"></iconfont>
+		<view style="width: 400rpx;height: 80rpx;" class="bg-danger animated faster" :class="isShow ? 'bounceInLeft': ''"
+			@click="onToggle()"></view>
 	</view>
 </template>
 
@@ -20,13 +22,18 @@
 		},
 		data() {
 			return {
-				statusBarHeight
+				statusBarHeight,
+				isShow: false,
 			}
 		},
 		onLoad() {
 
 		},
-		methods: {}
+		methods: {
+			onToggle() {
+				this.isShow = !this.isShow;
+			}
+		}
 	}
 </script>
 
