@@ -5,6 +5,7 @@
 		</view>
 		<!-- <view :style="{height:`${statusBarHeight}px`,background:'pink'}"></view> -->
 		<view>{{statusBarHeight}}</view>
+		<text class="iconfont icon-shoucang font-md"></text>
 	</view>
 </template>
 
