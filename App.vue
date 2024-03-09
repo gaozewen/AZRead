@@ -17,4 +17,5 @@
 	@import url(./common/css/free.css);
 	@import url(./common/css/iconfont.css);
 	@import url(./common/css/animate.css);
+	@import url(./common/css/myanimate.css)
 </style>

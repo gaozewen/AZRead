@@ -1,7 +1,8 @@
 <template>
-	<swiper indicator-dots autoplay circular indicator-active-color="#fff" class="swiper m-2">
+	<swiper indicator-dots autoplay circular indicator-active-color="#fff" class="swiper m-2" @change="onChangeSwiper">
 		<swiper-item v-for="(item, index) in imgArr" :key="index">
-			<image v-if="item.src" :src="item.src" mode="aspectFill" class="w-100"></image>
+			<image v-if="item.src" :src="item.src" mode="aspectFill" class="w-100 animated"
+				:class="currentImgIndex === index ? 'my-animate' : ''"></image>
 		</swiper-item>
 	</swiper>
 </template>
@@ -15,6 +16,16 @@
 				default: []
 			}
 		},
+		data() {
+			return {
+				currentImgIndex: 0,
+			}
+		},
+		methods: {
+			onChangeSwiper(e) {
+				this.currentImgIndex = e.detail.current
+			}
+		}
 	}
 </script>
 
